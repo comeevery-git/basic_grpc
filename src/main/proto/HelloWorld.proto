@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.example;
+option java_multiple_files = true;
+
+message BasicRequest {
+  string firstName = 1;
+  string secondName = 2;
+}
+
+message BasicResponse {
+  string greeting = 1;
+}
+
+// The greeting service definition.
+// * 'stream' keyword for bidirectional streaming
+service BasicService {
+  rpc hello(BasicRequest) returns (BasicResponse) {};
+}
+
+
+
+
